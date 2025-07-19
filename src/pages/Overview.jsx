@@ -62,7 +62,7 @@ const Overview = () => {
       <div className="max-w-5xl mx-auto p-4 sm:p-6">
         {/* Welcome Card */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-4 sm:p-8 mb-6 sm:mb-8 flex flex-col items-center text-center border border-white/20">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-2 drop-shadow-lg">Welcome to Thefni's Dashboard</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-2 drop-shadow-lg uppercase">dash vp engenharia</h1>
           <p className="text-blue-200 text-base sm:text-lg mb-2">Your advanced overview at a glance</p>
           <p className="text-gray-300 text-sm sm:text-base">Track your business performance, users, and growth in one beautiful place.</p>
         </div>

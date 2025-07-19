@@ -100,10 +100,10 @@ const Sidebar = ({ collapsed, setCollapsed, activeTab, setActiveTab, isAdmin, is
             <button
               key={link.name}
               onClick={() => setActiveTab(idx)}
-              className={`w-full flex items-center gap-3 px-5 py-3 mx-2 rounded-xl transition-colors ${collapsed ? 'justify-center' : ''} hover:bg-white/10 focus:bg-white/10 ${activeTab === idx ? 'bg-[#F6E27A]/20 text-[#F6E27A] font-bold' : 'text-white'}`}
+              className={`sidebar-item-button w-full flex items-center gap-3 px-5 py-3 mx-2 rounded-xl transition-colors ${collapsed ? 'justify-center' : ''} hover:bg-[#D6A647]/20 focus:bg-[#D6A647]/20 ${activeTab === idx ? 'bg-[#D6A647]/30 text-[#D6A647] font-bold' : 'text-white'}`}
               style={{ outline: 'none', border: 'none', background: 'none' }}
             >
-              {React.cloneElement(link.icon, { className: `${activeTab === idx ? 'text-[#F6E27A]' : 'text-white'}` })}
+              {React.cloneElement(link.icon, { className: `${activeTab === idx ? 'text-[#D6A647]' : 'text-white'}` })}
               <span className={`font-medium tracking-wide ${collapsed ? 'hidden' : 'block'}`}>{link.name}</span>
             </button>
           ) : (
@@ -111,11 +111,11 @@ const Sidebar = ({ collapsed, setCollapsed, activeTab, setActiveTab, isAdmin, is
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-5 py-3 mx-2 rounded-xl transition-colors ${collapsed ? 'justify-center' : ''} hover:bg-white/10 focus:bg-white/10 ${isActive ? 'bg-white/20' : ''}`
+                `sidebar-item flex items-center gap-3 px-5 py-3 mx-2 rounded-xl transition-colors ${collapsed ? 'justify-center' : ''} hover:bg-[#D6A647]/20 focus:bg-[#D6A647]/20 ${isActive ? 'bg-[#D6A647]/30 text-[#D6A647] font-bold' : 'text-white'}`
               }
             >
               {link.icon}
-              <span className={`font-medium tracking-wide text-white ${collapsed ? 'hidden' : 'block'}`}>{link.name}</span>
+              <span className={`font-medium tracking-wide ${collapsed ? 'hidden' : 'block'} ${isActive ? 'text-[#D6A647]' : 'text-white'}`}>{link.name}</span>
             </NavLink>
           )
         ))}
