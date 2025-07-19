@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&family=Orbitron:wght@400;700&family=Titillium+Web:wght@400;700&family=Exo+2:wght@400;700&display=swap');
+
+/* Modern, minimal, responsive global styles */
+body {
+  background: #1a2a33;
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #232f3e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3a4a;
+  border-radius: 4px;
+}
+
+/* Utility classes for spacing and backgrounds */
+.bg-petroleum {
+  background: #1a2a33;
+}
+.bg-light-gray {
+  background: #f7f9fa;
+}
+.text-petroleum {
+  color: #1a2a33;
+}
+.text-light-gray {
+  color: #f7f9fa;
+}
+
+/* Button animation for login */
+.login-animated {
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  will-change: transform, box-shadow;
+}
+.login-animated:hover {
+  background: #223344;
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px 0 rgba(34, 51, 68, 0.12);
+}
+.login-animated:active {
+  background: #16202a;
+  transform: scale(0.98);
+}
+
+/* Responsive helpers */
+@media (max-width: 900px) {
+  .max-w-6xl, .max-w-5xl, .max-w-4xl {
+    max-width: 98vw !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+@media (max-width: 600px) {
+  .rounded-2xl, .rounded-xl, .rounded-lg {
+    border-radius: 12px !important;
+  }
+  .p-8, .p-6, .p-12 {
+    padding: 1.25rem !important;
+  }
+}
